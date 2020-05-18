@@ -19,16 +19,13 @@ import com.filedetails.vo.FileDetailsVO;
 public class FileDetails {
 
 	public static void main(String[] args) {
-		//String path = "C:\\TechM\\interviews";
-		//String path ="C:\\TechM\\test empty";
-		String path = "F:\\Prathima";
+		 String path = "F:\\Raju";
 		//Method1 call
 		String fileDetailsJson = getFileDetails(path);
 		System.out.println("files:"+fileDetailsJson);
 		
 		//Method2 call
-		//String filePath = "C:\\TechM\\interviews\\05_11_Core_Java\\SRS_AyushGoyal_Java_4.7years_Techmahindra_Mumbai.doc";
-		String filePath = "F:\\Prathima\\Resume Samples\\RajamRaju_Resume.doc";
+		String filePath = "F:\\Raju\\Resume Samples\\Raju_Resume.doc";
 		String fileDescription = getFileDescription(filePath);
 		System.out.println("fileDescription:"+fileDescription);
 	}
