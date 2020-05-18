@@ -32,7 +32,7 @@ public class FileDetailsRestServiceTest {
 	
 	@Test
 	public void fileDetailsTest() throws Exception {
-		String path = "C:\\TechM\\interviews";
+		String path = "C:\\MyDocs\\samples";
 		String url = "/FileDetails/listFilesAndDirectories?filePath="+path;
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(url);
 		
@@ -45,7 +45,7 @@ public class FileDetailsRestServiceTest {
 	
 	@Test
 	public void fileDetailsExceptiontest() throws Exception {
-		String path = "C:\\TechM\\ path does not exists";
+		String path = "C:\\MyDocs\\ path does not exists";
 		String url = "/FileDetails/listFilesAndDirectories?filePath="+path;
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(url);
 		MvcResult mvcResult =mockMvc.perform(requestBuilder)
@@ -57,7 +57,7 @@ public class FileDetailsRestServiceTest {
 	
 	@Test
 	public void fileDescriptionTest() throws Exception {
-		String filePath = "C:\\TechM\\interviews\\05_11_Core_Java\\SRS_AyushGoyal_Java_4.7years_Techmahindra_Mumbai.doc";
+		String filePath = "C:\\MyDocs\\sampes\\05_11_Core_Java\\SRS_AyushGoyal.doc";
 		String url = "/FileDetails/listFileProperties?filePath="+filePath;
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(url);
 		
@@ -69,7 +69,7 @@ public class FileDetailsRestServiceTest {
 	
 	@Test
 	public void fileDescriptionExceptiontest() throws Exception {
-		String path = "C:\\TechM\\ path does not exists";
+		String path = "C:\\MyDocs\\ path does not exists";
 		String url = "/FileDetails/listFileProperties?filePath="+path;
 		RequestBuilder requestBuilder = MockMvcRequestBuilders.get(url);
 		MvcResult mvcResult =mockMvc.perform(requestBuilder)
